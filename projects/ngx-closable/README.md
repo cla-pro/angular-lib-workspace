@@ -1,8 +1,18 @@
 # NgxClosable
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Library that provides a very simple responsive way to make a component closable (hidden) based on a toggle button. If the screen is big enough, the component is always displayed and the toggle button hidden.
 
-## Code scaffolding
+## Usage
+
+If you have only one closable content (and toggle) in your whole application, only the attribute directive is required for both the content and the toggle.
+
+```ts
+<div ngxClosable>
+    ...
+</div>
+...
+<button ngxClosableToggle>...</button>
+```
 
 Run `ng generate component component-name --project ngx-closable` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-closable`.
 > Note: Don't forget to add `--project ngx-closable` or else it will be added to the default project in your `angular.json` file. 

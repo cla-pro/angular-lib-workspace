@@ -2,6 +2,5 @@
  * Public API Surface of ngx-closable
  */
 
-export * from './lib/ngx-closable.service';
-export * from './lib/ngx-closable.component';
-export * from './lib/ngx-closable.module';
+export * from './lib/ngx-closable.directive';
+export * from './lib/ngx-closable-toggle.directive';
