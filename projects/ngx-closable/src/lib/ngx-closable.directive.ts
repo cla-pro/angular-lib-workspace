@@ -1,16 +1,16 @@
-import { AfterViewInit, Directive, HostBinding, HostListener, Input } from '@angular/core';
+import { AfterViewInit, Directive, HostBinding, HostListener, Input, OnDestroy } from '@angular/core';
 import { NgxClosableToggleEventModel } from "./ngx-closable-toggle-event.model";
 
 @Directive({
   selector: '[ngxClosable]',
 })
-export class NgxClosableDirective implements AfterViewInit {
+export class NgxClosableDirective implements AfterViewInit, OnDestroy {
   @Input() closableId: string = "";
 
   private isClosed: boolean = false;
   private isClosable: boolean = false;
 
-  @HostBinding('class.closed')
+  @HostBinding('class.ngx-closed')
   public get closed(): boolean {
     return this.isClosed;
   }
@@ -21,7 +21,10 @@ export class NgxClosableDirective implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.detectScreenSize();
+  }
 
+  ngOnDestroy(): void {
+    document.removeEventListener('NgxClosableToggleEvent', (e: any) => this.onClosableToggleEvent(e.detail))
   }
 
   @HostListener("window:resize", [])
@@ -44,7 +47,7 @@ export class NgxClosableDirective implements AfterViewInit {
   }
 
   private isSmallScreen(): boolean {
-    return window.innerWidth < 500 || window.innerHeight < 500;
+    return window.innerWidth < 960;
   }
 
   private toggle(): void {

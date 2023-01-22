@@ -3,5 +3,6 @@
   "dest": "../../dist/ngx-closable",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "assets": ["./assets/**/*.*"]
 }

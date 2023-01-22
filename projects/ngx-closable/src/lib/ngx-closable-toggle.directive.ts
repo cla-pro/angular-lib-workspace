@@ -8,7 +8,7 @@ export class NgxClosableToggleDirective implements AfterViewInit {
 
   private isClosable: boolean = false;
 
-  @HostBinding('class.closed')
+  @HostBinding('class.ngx-closed')
   public get closed() {
     return !this.isClosable;
   }
@@ -36,7 +36,7 @@ export class NgxClosableToggleDirective implements AfterViewInit {
   }
 
   isSmallScreen(): boolean {
-    return window.innerWidth < 500 || window.innerHeight < 500;
+    return window.innerWidth < 960;
   }
 
   toggle(): void {
