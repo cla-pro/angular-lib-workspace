@@ -20,11 +20,12 @@ export class NgxClosableToggleDirective implements AfterViewInit {
   }
 
   @HostListener("window:resize", [])
-  private onResize() {
+  onResize() {
     this.detectScreenSize();
   }
 
-  @HostListener('click', ['$event']) onClick($event: any){
+  @HostListener('click', ['$event'])
+  onClick($event: any) {
     this.toggle();
   }
 

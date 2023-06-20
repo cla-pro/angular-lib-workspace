@@ -28,7 +28,7 @@ export class NgxClosableDirective implements AfterViewInit, OnDestroy {
   }
 
   @HostListener("window:resize", [])
-  private onResize() {
+  onResize() {
     this.detectScreenSize();
   }
 
