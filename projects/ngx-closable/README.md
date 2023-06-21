@@ -4,6 +4,22 @@ Library that provides a very simple responsive way to make a component closable 
 
 ## Usage
 
+Import the NgxClosableModule within your NgModule.
+```ts
+@NgModule({
+    declarations: [],
+    imports: [
+        ...,
+        NgxClosableModule
+    ],
+})
+```
+and import the css in your styles.css
+
+```css
+@import '../node_modules/ngx-closable/assets/ngx-closable.css'
+```
+
 If you have only one closable content (and toggle) in your whole application, only the attribute directive is required for both the content and the toggle.
 
 ```ts

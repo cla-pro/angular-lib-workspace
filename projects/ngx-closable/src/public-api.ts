@@ -4,3 +4,4 @@
 
 export * from './lib/ngx-closable.directive';
 export * from './lib/ngx-closable-toggle.directive';
+export * from './lib/ngx-closable.module'
