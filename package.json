@@ -19,15 +19,15 @@
     "@angular/platform-browser-dynamic": "^17.0.6",
     "@angular/router": "^17.0.6",
     "rxjs": "~7.8.1",
-    "tslib": "^2.5.2",
+    "tslib": "^2.6.2",
     "zone.js": "~0.14.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.6",
     "@angular/cli": "~17.0.6",
     "@angular/compiler-cli": "^17.0.6",
-    "@types/jasmine": "~4.3.0",
-    "jasmine-core": "~4.5.0",
+    "@types/jasmine": "~5.1.4",
+    "jasmine-core": "~5.1.1",
     "karma": "~6.4.2",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
