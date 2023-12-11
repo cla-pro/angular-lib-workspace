@@ -24,4 +24,7 @@ describe('NgxClosableToggleDirective', () => {
   it('should be created', () => {
     expect(debugElements.length).toBe(1);
   });
+
+  // TODO test the sending of the CustomEvent
+  // TODO test the "hiding"/"showing" of the button when the window is resized
 });
